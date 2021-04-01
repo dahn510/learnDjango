@@ -1,22 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-posts = [
-        {
-            'author': 'Potato',
-            'title': 'Potato chips',
-            'content': 'Potato chips are acutally overrated.',
-        },
-        {
-            'author': 'Gaming mouse',
-            'title': 'Razer mouse finally breaks',
-            'content': 'Over the heavy usage of two years, the Razer DeathAdder Elite mouse finally stops registering mouse clicks.'
-        }
-]
+from .models import Post
 
 def home(request):
     context = {
-            'posts': posts
+            'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
