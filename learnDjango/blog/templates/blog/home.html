@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LearnDjango Home page</title>
+</head>
+<body>
+    <h1>This is blog home page</h1>
+    {% for post in posts %}
+        <h2>{{ post.title}}</h1>
+        <h3>{{ post.author }} </h3>
+        <p>{{ post.content }}<p>
+    {% endfor %}
+</body>
+</html>
+
