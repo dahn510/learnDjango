@@ -1,0 +1,33 @@
+/* with the help if Anh */
+body {
+    display: grid;
+    grid-template-areas: "header"
+                         "page";
+    grid-template-rows: auto 100%;
+}
+ul {
+    list-style-type: none;
+}
+
+li {
+    line-height: 30px;
+}
+
+header {
+    color: white;
+    background-color: green;
+    grid-row: header;
+    grid-column: header;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-menu {
+    display: grid;
+    justify-content: end;
+}
+
+a:hover {
+    color: pink;
+}
