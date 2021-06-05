@@ -2,7 +2,7 @@
 {% block content %}
 
 <h2>{{ object.title }}</h2>
-<a>Author: {{ object.author }}</a>
+<p>author: <a href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a></p>
 <p>{{ object.content }}<p>
 
 {% if object.author == user %}
